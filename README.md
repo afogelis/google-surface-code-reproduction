@@ -5,7 +5,7 @@ A **simulation** reproduction of Google Quantum AI's 2023 result
 reproduces the experiment's methodology and central scaling claim: below threshold, increasing the
 code distance suppresses the logical error per cycle.
 
-This is repo 6 (capstone A) of a seven-part [QEC research portfolio](../README.md) and builds on
+This is repo 6 (capstone A) of a seven-part [QEC research portfolio](https://github.com/afogelis/qec-portfolio) and builds on
 [`surface-code-simulator`](https://github.com/afogelis/surface-code-simulator).
 
 ## What is and is not reproduced
@@ -34,11 +34,17 @@ pytest
 grepro --p 0.004 --shots 40000     # writes figures/ and reports/TECHNICAL_REPORT.md
 ```
 
-## Outputs
+## Results
 
-- [`reports/TECHNICAL_REPORT.md`](reports/TECHNICAL_REPORT.md) — full write-up with results table, Lambda factors, caveats and references.
-- `figures/fidelity_decay.png` — logical error vs rounds per distance.
-- `figures/epsilon_vs_distance.png` — logical error per cycle vs distance, with the published points overlaid.
+![Logical error versus number of QEC rounds for code distances 3, 5 and 7.](figures/fidelity_decay.png)
+
+*Logical error versus number of rounds. The per-cycle logical error epsilon is fit from each decay curve.*
+
+![Logical error per cycle versus code distance, with Google's published values overlaid for context.](figures/epsilon_vs_distance.png)
+
+*Simulated logical error per cycle versus distance (this work), with the published experimental values shown for context. Below threshold, epsilon falls with distance (Lambda ~ 2.2).*
+
+Full write-up: [`reports/TECHNICAL_REPORT.md`](reports/TECHNICAL_REPORT.md) — results table, Lambda factors, caveats and references.
 
 ## Method (one paragraph)
 
