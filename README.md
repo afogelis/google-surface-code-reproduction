@@ -5,7 +5,7 @@ A **simulation** reproduction of Google Quantum AI's 2023 result
 reproduces the experiment's methodology and central scaling claim: below threshold, increasing the
 code distance suppresses the logical error per cycle.
 
-This is repo 6 (capstone A) of a seven-part [QEC research portfolio](https://github.com/afogelis/qec-portfolio) and builds on
+This is repo 6 (capstone A) of a ten-part [QEC research portfolio](https://github.com/afogelis/qec-portfolio) and builds on
 [`surface-code-simulator`](https://github.com/afogelis/surface-code-simulator).
 
 ## What is and is not reproduced
