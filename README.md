@@ -13,18 +13,18 @@ This is repo 6 (capstone A) of a ten-part [QEC research portfolio](https://githu
 - **Reproduced:** the extraction of *logical error per cycle* (epsilon) from logical-fidelity decay
   with the number of rounds, and the qualitative scaling -- larger distance, smaller epsilon
   (suppression factor Lambda > 1) -- plus the near-threshold regime where the improvement is modest.
-- **Not reproduced:** the device-specific absolute error rates. We use a single uniform
-  circuit-level depolarizing model, not Google's calibrated per-component noise, so the published
+- **Not reproduced:** the device-specific absolute error rates. A single uniform circuit-level
+  depolarizing model is used, not Google's calibrated per-component noise, so the published
   values (~3.0% per cycle) are shown for context only, not as a target to hit.
 
-This honest scoping is deliberate: a full hardware reproduction is impossible without the device,
-so the value is in reproducing the *analysis and the physics conclusion*.
+A full hardware reproduction is not possible without the device, so the scope is limited to
+reproducing the *analysis and the physics conclusion*.
 
-## What this demonstrates
+## Scope
 
-- Reading a landmark experimental paper and re-deriving its key quantity in simulation.
-- Rigorous methodology: fitting epsilon from fidelity decay, computing the Lambda suppression factor.
-- Scientific honesty about the boundary between what simulation can and cannot reproduce.
+- Reading an experimental paper and re-deriving its key quantity in simulation.
+- Methodology: fitting epsilon from fidelity decay, computing the Lambda suppression factor.
+- Explicit statement of the boundary between what simulation can and cannot reproduce.
 
 ## Install and run
 
