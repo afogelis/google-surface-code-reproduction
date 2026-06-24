@@ -1,6 +1,6 @@
 """Extract logical error per cycle, the central quantity of the Google experiment.
 
-The experiment characterises a logical qubit by its *logical error per cycle*
+The experiment characterizes a logical qubit by its *logical error per cycle*
 (epsilon): the probability that the logical state is corrupted in one round of
 error correction. It is extracted from how the logical fidelity decays with the
 number of rounds N:

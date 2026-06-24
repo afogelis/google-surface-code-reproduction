@@ -103,7 +103,7 @@ the distance-3 ensemble.
 
 - Uniform depolarizing noise replaces Google's calibrated component model, so absolute epsilon
   values are not expected to match the experiment.
-- Leakage, crosstalk and non-Markovian effects present in hardware are not modelled.
+- Leakage, crosstalk and non-Markovian effects present in hardware are not modeled.
 - MWPM is used as the decoder; the paper also studied more advanced decoders.
 
 ## References

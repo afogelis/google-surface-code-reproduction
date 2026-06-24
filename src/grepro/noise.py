@@ -8,7 +8,7 @@ component rates into one effective rate via a simple weighted mean.
 
 This is an approximation, not a faithful copy of the device noise. The component
 figures below are representative order-of-magnitude values from the paper and its
-supplement; the goal is to reproduce the *scaling behaviour* (how logical error
+supplement; the goal is to reproduce the *scaling behavior* (how logical error
 changes with code distance), not the exact device calibration. Values that we are
 not confident citing precisely are flagged in the technical report.
 """
