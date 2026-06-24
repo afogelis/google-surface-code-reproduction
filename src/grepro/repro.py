@@ -1,7 +1,7 @@
 """Reproduce the Google surface-code scaling result and write the report.
 
-    grepro            # run with defaults, write figures/ and reports/
-    grepro --p 0.004 --shots 40000
+grepro            # run with defaults, write figures/ and reports/
+grepro --p 0.004 --shots 40000
 """
 
 from __future__ import annotations
@@ -118,7 +118,9 @@ quantum computation. Physical Review A 2012; 86:032324.
 
 def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(prog="grepro", description=__doc__)
-    parser.add_argument("--p", type=float, default=0.004, help="Below-threshold physical error rate.")
+    parser.add_argument(
+        "--p", type=float, default=0.004, help="Below-threshold physical error rate."
+    )
     parser.add_argument("--shots", type=int, default=40_000)
     parser.add_argument("--seed", type=int, default=2023)
     parser.add_argument("--figures-dir", type=str, default="figures")

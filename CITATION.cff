@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Google Surface-Code Scaling Reproduction"
+abstract: "Simulation reproduction of Google Quantum AI's 2023 surface-code scaling experiment, compared against the published logical error rates."
+type: software
+authors:
+  - family-names: "Fogelis"
+    given-names: "Andrew"
+version: "0.1.0"
+date-released: "2026-06-23"
+license: MIT
+repository-code: "https://github.com/afogelis/google-surface-code-reproduction"
+keywords:
+  - quantum-error-correction
+  - surface-code
+  - reproduction
+  - google
+  - stim

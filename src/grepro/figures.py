@@ -21,8 +21,12 @@ def plot_fidelity_decay(results: Sequence[CycleErrorResult], *, ax: Axes | None 
     if ax is None:
         _, ax = plt.subplots(figsize=(7, 5))
     for result in sorted(results, key=lambda r: r.distance):
-        ax.plot(result.rounds, result.logical_error_rates, marker="o",
-                label=f"d = {result.distance} (eps = {result.epsilon:.4f})")
+        ax.plot(
+            result.rounds,
+            result.logical_error_rates,
+            marker="o",
+            label=f"d = {result.distance} (eps = {result.epsilon:.4f})",
+        )
     ax.set_xlabel("Number of rounds N")
     ax.set_ylabel("Logical error probability")
     ax.set_title("Logical error vs rounds (Google reproduction)")
@@ -50,8 +54,15 @@ def plot_epsilon_vs_distance(
         pub_d = sorted(PUBLISHED_LOGICAL_ERROR_PER_CYCLE)
         pub_eps = [PUBLISHED_LOGICAL_ERROR_PER_CYCLE[d] for d in pub_d]
         pub_err = [PUBLISHED_LOGICAL_ERROR_UNCERTAINTY[d] for d in pub_d]
-        ax.errorbar(pub_d, pub_eps, yerr=pub_err, marker="D", linestyle="--", capsize=4,
-                    label="Google Nature 2023 (experiment)")
+        ax.errorbar(
+            pub_d,
+            pub_eps,
+            yerr=pub_err,
+            marker="D",
+            linestyle="--",
+            capsize=4,
+            label="Google Nature 2023 (experiment)",
+        )
 
     ax.set_yscale("log")
     ax.set_xlabel("Code distance d")
