@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "google-surface-code-reproduction"
+version = "0.1.0"
+description = "Simulation reproduction of Google Quantum AI's 2023 surface-code scaling experiment, compared against the published logical error rates."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Andrew Fogelis" }]
+keywords = ["quantum-error-correction", "surface-code", "reproduction", "google", "stim"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "surface-code-simulator @ git+https://github.com/afogelis/surface-code-simulator.git@v0.1.0",
+    "stim>=1.13",
+    "numpy>=1.24",
+    "scipy>=1.10",
+    "matplotlib>=3.7",
+    "pydantic>=2.5",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=7.4", "pytest-cov>=4.1", "jupyter>=1.0", "nbformat>=5.9"]
+
+[project.scripts]
+grepro = "grepro.repro:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.coverage.run]
+source = ["grepro"]
